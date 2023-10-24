@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="checkbox" id="opcion1" name="opciones" value="opcion1" onclick="desmarcar(this)">Opcion 1<br>
+        <input type="checkbox" id="opcion2" name="opciones" value="opcion2">Opcion 2<br>
+        <input type="checkbox" id="opcion3" name="opciones" value="opcion3" onclick="desmarcar(this)">Opcion 3<br>
+    </form>
+     
+    <script>
+        const checkboxes = document.getElementsByName("opciones");
+
+        for (let i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].onclick = function() {
+                desmarcar(checkboxes[i]);
+            };
+        }
+
+        function desmarcar(checkbox) {
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i] !== checkbox) {
+                    checkboxes[i].checked = false;
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>
