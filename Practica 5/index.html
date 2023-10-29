@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <h1>Inicio</h1>
+        <form id="formulario" action="procesar.php">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" autofocus>
+                <p class="error-feedback"></p>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido">
+                <p class="error-feedback"></p>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email">
+                <p class="error-feedback"></p>
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha de Nacimiento:</label>
+                <input type="date" name="fecha" max="1999-12-31" id="fecha">
+                <p class="error-feedback"></p>
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI:</label>
+                <input type="text" name="dni" id="dni">
+                <p class="error-feedback"></p>
+            </div>
+            <div class="form-group">
+                <label for="cp">Codigo postal:</label>
+                <input type="cp" name="cp" id="cp">
+                <p class="error-feedback"></p>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Numero de telefono:</label>
+                <input type="tel" name="telefono" id="telefono">
+                <p class="error-feedback"></p>
+            </div>
+            <div class="form-group">
+                <label for="tarjeta">Tarjeta de credito:</label>
+                <input type="text" name="tarjeta" id="tarjeta">
+                <p class="error-feedback"></p>
+            </div>
+            <div class="form-group">
+                <label for="usuario">Nombre de usuario:</label>
+                <input type="text" name="usuario" id="usuario">
+                <p class="error-feedback"></p>
+            </div>
+            <div class="form-group">
+                <label for="passwd">Password:</label>
+                <input type="password" name="passwd" id="passwd">
+                <p class="error-feedback"></p>
+            </div>
+            <div class="form-group">
+                <label for="condiciones">Acepto las condiciones de privacidad:</label>
+                <input type="checkbox" name="condiciones" id="condiciones">
+                <p class="error-feedback"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="publiapple">Recibir publicidad de Apple:</label>
+                <input type="checkbox" name="publiapple" id="publiapple">
+                <p class="error-feedback"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="publigoogle">Recibir publicidad de Google:</label>
+                <input type="checkbox" name="publigoogle" id="publigoogle">
+                <p class="error-feedback"></p>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="btn-submit">Enviar</button>
+                <button type="reset">Restablecer</button>
+            </div>
+
+
+        </form>
+    </div>
+
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
