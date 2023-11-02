@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+
+            <div class="card-body">
+                <h4 class="card-title">Validador de tarjeta de crédito</h4>
+
+                <form action="" id="formulario">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="tipocard" id="visa" value="VISA" checked>
+                            VISA
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="tipocard" id="mastercard"
+                                value="MASTERCARD">
+                            Master Card
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="tipocard" id="naranja" value="NARANJA">
+                            Naranja
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="tipocard" id="cabal" value="CABAL">
+                            Cabal
+                        </label>
+
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="tipocard" id="amex" value="AMEX">
+                            American Express
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="numTarjeta">Número de tarjeta</label>
+                        <input type="text" class="form-control" name="numTarjeta" id="numTarjeta"
+                            aria-describedby="helpId" placeholder="Introduzca un número válido de tarjeta">
+                        <div class="valid-feedback">Número válido de tarjeta.</div>
+                        <div class="invalid-feedback">Número inválido de tarjeta.</div>
+                    </div>
+                    <button id="btn-validar" type="button" class="btn btn-primary">Validar</button>
+                </form>
+
+            </div>
+
+
+        </div>
+
+
+
+        <h2>El algoritmo Luhn:</h2>
+        <img src="./img/PAN_valido_luhn.png"
+            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+            alt="PAN-Valido">
+        <img src="./img/PAN_invalido.png"
+            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+
+        <h2>Fuentes:</h2>
+        <div class="list-group">
+            <a href="https://depcsuite.com/validar-numero-de-tarjeta-de-credito-por-javascript/?v=d72a48a8ebd2"
+                class="list-group-item list-group-item-action">Validar tarjeta de crédito</a>
+            <a href="https://www.pcihispano.com/el-algoritmo-de-luhn-y-su-importancia-para-la-validacion-de-tarjetas-de-pago/"
+                class="list-group-item list-group-item-action">El algoritmo Luhn</a>
+            <a href="https://herramientas-online.com/generador-tarjeta-credito-cvv.php"
+                class="list-group-item list-group-item-action">Generador de tarjetas
+                válidas</a>
+
+
+        </div>
+        <script src="app.js"></script>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+
+   
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
