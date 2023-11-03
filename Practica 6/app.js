@@ -16,9 +16,9 @@ window.addEventListener("load", function () {
 
   //Funcion que recorre los radiobuttons, determina cual esta marcado y lo retorna
   function obtenerTipoTarjeta() {
-    var opciones = document.getElementsByName("tipocard");
+    let opciones = document.getElementsByName("tipocard");
 
-    for (var i = 0; i < opciones.length; i++) {
+    for (let i = 0; i < opciones.length; i++) {
       if (opciones[i].checked) {
         return opciones[i].value;
       }
@@ -60,16 +60,16 @@ window.addEventListener("load", function () {
 
   //Funcion que recoge los divs de feedback, muestra el de invalido y oculta el de valido
   function marcarError() {
-    var divError = document.querySelector(".invalid-feedback");
-    var divValido = document.querySelector(".valid-feedback");
+    let divError = document.querySelector(".invalid-feedback");
+    let divValido = document.querySelector(".valid-feedback");
 
     divError.style.display = "block";
     divValido.style.display = "none";
   }
 
   function marcarValido() {
-    var divError = document.querySelector(".invalid-feedback");
-    var divValido = document.querySelector(".valid-feedback");
+    let divError = document.querySelector(".invalid-feedback");
+    let divValido = document.querySelector(".valid-feedback");
 
     divError.style.display = "none";
     divValido.style.display = "block";
