@@ -1,0 +1,81 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>DOM b�sico y atributos XHTML</title>
+
+    </script>
+</head>
+
+<body>
+    <p id="contenidos_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus
+        libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc,
+        posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices
+        porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis,
+        faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at
+        posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    <a id="enlace_1" href="#">Ocultar contenidos</a>
+    <br />
+    <p id="contenidos_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus
+        libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc,
+        posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices
+        porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis,
+        faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at
+        posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    <a id="enlace_2" href="#">Ocultar contenidos</a>
+    <br />
+    <p id="contenidos_3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus
+        libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc,
+        posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices
+        porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis,
+        faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at
+        posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    <a id="enlace_3" href="#">Ocultar contenidos</a>
+    <script>
+        /*  A partir de la página web proporcionada, completar el código JavaScript para que:
+ 
+ 1.   Cuando se pinche sobre el primer enlace, se oculte su sección relacionada
+ 2.   Cuando se vuelva a pinchar sobre el mismo enlace, se muestre otra vez esa sección de contenidos
+ 3.   Completar el resto de enlaces de la página para que su comportamiento sea idéntico al del primer enlace
+ 4.   Cuando una sección se oculte, debe cambiar el mensaje del enlace asociado (pista: textContent);
+ 
+  */
+
+        const  contenidos1 = document.getElementById("contenidos_1");
+        const enlace1 = document.getElementById("enlace_1");
+
+        const  contenidos2 = document.getElementById("contenidos_2");
+        const enlace2 = document.getElementById("enlace_2");
+
+        const  contenidos3 = document.getElementById("contenidos_3");
+        const enlace3 = document.getElementById("enlace_3");
+
+        enlace1.addEventListener("click", e=>{
+            muestraOculta(enlace1, contenidos1);
+        });
+
+        enlace2.addEventListener("click", e=>{
+            muestraOculta(enlace2, contenidos2);
+        });
+
+        enlace3.addEventListener("click", e=>{
+            e.preventDefault();
+            muestraOculta(enlace3, contenidos3);
+        });
+
+        function muestraOculta(enlace, div) {
+        estaMostrado = div.style.display === "block" || div.style.display === "";
+           if (!estaMostrado){
+            div.style.display = "block";
+            enlace.textContent = "Ocultar contenidos";
+           } else {
+            div.style.display = "none";
+            enlace.textContent = "Mostrar contenidos";
+           }
+        }
+    </script>
+</body>
+
+</html>
