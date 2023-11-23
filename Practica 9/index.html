@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian Sanz</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <img src="./imagenes/avatar.png" alt="Imagen" width="25%"
+                            class="img-fluid mb-3 mx-auto d-block">
+                        <h2 class="text-center">Inicio de Sesión</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="formulario">
+                            <div class="form-group">
+                                <label for="email">Correo Electronico</label>
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Ingrese su correo electronico">
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Contraseña</label>
+                                <input type="password" class="form-control" name="password" id="password"
+                                    placeholder="Ingrese su contraseña">
+                                <span id="error" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-check text-center mb-3">
+                                <input type="checkbox" class="form-check-input" id="recordar">
+                                <label class="form-check-label" for="recordar">Recordar</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-50 mx-auto btn-block">Iniciar Sesión</button>
+
+                        </form>
+                    </div>
+
+                    <div class="card-footer text-muted text-center">
+                        &copy; Adrian Sanz
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
